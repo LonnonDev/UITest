@@ -42,9 +42,11 @@ async fn main() {
 		currentkeys = tmp.1;
 		println!("{}", currentkeys);
 		clear_background(RED);
+
 		//# Get player pos
 		player_pos.x = player_character.position.x+player_direction.x;
 		player_pos.y = player_character.position.y+player_direction.y;
+		
 		//# create player character and draw it
 		player_character = Rectangle::square(&player_pos, SIZE, BLUE);
 		player_character.draw(&_lastpos);
