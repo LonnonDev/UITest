@@ -61,10 +61,30 @@ fn movement(currentkeys: u32) -> (Vec2, u32) {
 	};
 	let mut currentkeys: u32 = currentkeys;
 	//# Get the key that's pressed down and then changed plymove to that position
-	if is_key_down(KeyCode::W) { plymove.y = -MOVESPEED; currentkeys = currentkeys + 1; } else { currentkeys = currentkeys - 1; }
-	if is_key_down(KeyCode::S) { plymove.y = MOVESPEED; currentkeys = currentkeys + 1; } else { currentkeys = currentkeys - 1; }
-	if is_key_down(KeyCode::A) { plymove.x = -MOVESPEED; currentkeys = currentkeys + 1; } else { currentkeys = currentkeys - 1; }
-	if is_key_down(KeyCode::D) { plymove.x = MOVESPEED; currentkeys = currentkeys + 1; } else { currentkeys = currentkeys - 1; }
+	if is_key_down(KeyCode::W) {
+		plymove.y = -MOVESPEED; 
+		currentkeys = currentkeys + 1; 
+	} else { 
+		currentkeys = currentkeys - 1; 
+	}
+	if is_key_down(KeyCode::S) {
+		plymove.y = MOVESPEED; 
+		currentkeys = currentkeys + 1; 
+	} else { 
+		currentkeys = currentkeys - 1; 
+	}
+	if is_key_down(KeyCode::A) {
+		plymove.x = -MOVESPEED; 
+		currentkeys = currentkeys + 1; 
+	} else { 
+		currentkeys = currentkeys - 1; 
+	}
+	if is_key_down(KeyCode::D) {
+		plymove.x = MOVESPEED; 
+		currentkeys = currentkeys + 1; 
+	} else { 
+		currentkeys = currentkeys - 1; 
+	}
 
 	return (plymove, currentkeys)
 }
